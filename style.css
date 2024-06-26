@@ -1,0 +1,111 @@
+.profile
+{
+	gap: 30px;
+	margin-bottom: 50px;
+}
+.profile__image
+{
+	flex-basis: 35%;
+	object-fit: cover;
+	height: 287px;
+}
+.profile__wrap
+{
+	flex-basis: 60%;
+}
+.profile__wrap h2
+{
+	font-size: 34px;
+	line-height: 36px;
+	margin-bottom: 14px;
+}
+.profile__link
+{
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	margin-bottom: 14px;
+}
+.profile__info h3
+{
+	margin-bottom: 14px;
+}
+.profile__info span
+{
+	font-size: 14px;
+	line-height: 16px;
+}
+.todo__wrap
+{
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	margin-bottom: 14px;
+}
+.todo__value
+{
+	width: 200px;
+	height: 40px;
+	border: 1px solid #d3d3d3;
+	border-radius: 5px;
+	outline: 0;
+	padding: 0 10px;
+}
+.todo__add
+{
+	padding: 0 30px;
+	border-radius: 5px;
+	height: 40px;
+	line-height: 40px;
+	cursor: pointer;
+	transition: all .3s;
+}
+.todo__add:hover
+{
+	background: green;
+	color: white;
+}
+.todo__item
+{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	cursor: pointer;
+	transition: all .3s;
+	margin-bottom: 10px;
+	padding: 10px 15px;
+}
+.todo__item.active
+{
+	background: rgba(29, 163, 116, .4);
+	color: white;
+}
+.todo__item.active:hover
+{
+	background: rgba(29, 163, 116, .4);
+	color: white;
+}
+.todo__item:hover
+{
+	background: rgba(255, 241, 115, 0.64);
+	color: white;
+}
+.todo__close
+{
+	background: url('image/close.svg');
+	width: 17px;
+	height: 17px;
+}
+@media(max-width: 768px)
+{
+	.profile
+	{
+		display: block;
+	}
+	.profile__image
+	{
+		width: 100%;
+		height: 200px;
+		margin-bottom: 14px;
+	}
+}
