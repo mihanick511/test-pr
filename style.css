@@ -96,6 +96,16 @@
 	width: 17px;
 	height: 17px;
 }
+.query__list div
+{
+	margin-bottom: 10px;
+	cursor: pointer;
+	transition: all .3s;
+}
+.query__list div:hover
+{
+	color: rgba(29, 163, 116, .4);
+}
 @media(max-width: 768px)
 {
 	.profile

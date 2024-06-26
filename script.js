@@ -61,3 +61,54 @@ class Todo {
 }
 const todo = new Todo
 todo.init()
+
+
+
+class QuryList {
+	constructor()
+	{
+		this.queryBtn = document.querySelector('._queryBtn')
+		this.querylist = document.querySelector('._queryList')
+		this.data = []
+	}
+	init()
+	{
+		this.queryBtn.addEventListener('click', ()=>
+		{
+			this.send()
+		})
+	}
+	send()
+	{
+		let div
+		this.data = fetch('https://jsonplaceholder.typicode.com/users')
+		.then(response => response.json())
+		.then(json =>
+		{
+			json.forEach((el,index)=>
+			{
+				div = document.createElement('div')
+				this.querylist.appendChild(div)
+				div.innerText = el.name
+				div.addEventListener('click', ()=>
+				{
+					this.routes(el)
+				})
+			})
+		})
+	}
+	routes(data)
+	{
+		let a = localStorage.setItem('test', data.name);
+		window.location.href = 'detail.html'
+		// setTimeout(()=>
+		// {
+		// 	document.querySelector('.test').innerText = localStorage.getItem('test');
+		// },0)
+		
+		
+	}
+}
+const quryList = new QuryList
+quryList.init()
+
